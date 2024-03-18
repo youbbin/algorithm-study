@@ -6,12 +6,7 @@ class Solution {
         int n = nums.length;
         HashMap<Integer, Integer> hashmap = new HashMap<>();
         for(int i = 0; i < n; i++){
-            if(hashmap.containsKey(nums[i])){
-                hashmap.put(nums[i], hashmap.get(nums[i] + 1));
-            }
-            else{
                 hashmap.put(nums[i], 1);
-            }
         }
 
         int type_num = hashmap.size();
@@ -21,7 +16,6 @@ class Solution {
         else{
             answer = n/2;
         }
-       
         return answer;
     }
 }
